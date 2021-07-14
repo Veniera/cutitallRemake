@@ -30,7 +30,6 @@ public class KnifeMov : MonoBehaviour
     public AudioSource CutSound;
     public AudioClip Kesme1;
     public AudioClip KnifeJump;
-    
 
     void Start()
     {
@@ -46,9 +45,7 @@ public class KnifeMov : MonoBehaviour
             CutSound.PlayOneShot(KnifeJump);
         }
       
-
         Collider[] wCutObj = Physics.OverlapBox(transform.position, new Vector3(0.66f, 0.005f, 0.46f), transform.rotation, mask);
-
         foreach (Collider nObject in wCutObj)
         {
             Destroy(nObject.gameObject);
@@ -65,6 +62,7 @@ public class KnifeMov : MonoBehaviour
             CutSound.PlayOneShot(Kesme1);
             
         }
+
         Score.text = " Score " +" = "+ count;
     }
     void KnifeForce()

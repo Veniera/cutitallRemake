@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class DestroyObj : MonoBehaviour
 {
-
-
     private void OnCollisionStay(Collision collision)
     {
         Destroy(GameObject.FindWithTag("Cutten"));
     }
-
 }
